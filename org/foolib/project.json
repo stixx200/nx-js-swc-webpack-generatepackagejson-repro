@@ -1,0 +1,19 @@
+{
+  "name": "foolib",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "foolib/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/foolib",
+        "main": "foolib/src/index.ts",
+        "tsConfig": "foolib/tsconfig.lib.json",
+        "assets": ["foolib/*.md"]
+      }
+    }
+  },
+  "tags": []
+}
